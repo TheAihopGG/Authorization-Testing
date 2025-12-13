@@ -13,9 +13,12 @@ dependencies = [
     "psycopg[binary] (>=3.3.2,<4.0.0)",
     "jwt (>=1.4.0,<2.0.0)",
     "uvicorn (>=0.38.0,<0.39.0)",
-    "bcrypt (>=5.0.0,<6.0.0)"
+    "bcrypt (>=5.0.0,<6.0.0)",
+    "yoyo-migrations (>=9.0.0,<10.0.0)",
 ]
 
+[tool.poetry]
+package-mode = false
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
