@@ -1,7 +1,7 @@
-from typing import TypedDict
+from typing import NamedTuple
 
 
-class Template(TypedDict): ...
+class Template(NamedTuple): ...
 
 
 __all__ = ("Template",)
