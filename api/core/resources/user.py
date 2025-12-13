@@ -1,7 +1,7 @@
-from typing import TypedDict
+from typing import NamedTuple
 
 
-class User(TypedDict):
+class User(NamedTuple):
     id: int
     name: str
     password_hash: bytes
