@@ -8,4 +8,4 @@ RUN poetry install -n
 COPY . .
 RUN chmod +x ./prestart.sh
 ENTRYPOINT [ "sh", "./prestart.sh" ]
-CMD ["uvicorn", "main:app", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--port", "8000", "--host", "0.0.0.0"]
