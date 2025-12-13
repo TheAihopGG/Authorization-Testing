@@ -12,7 +12,6 @@ services:
       - "./api/migrations:/api/migrations"
     environment:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - BCRYPT_SALT=${BCRYPT_SALT}
   postgres:
     image: postgres:alpine
     environment:
