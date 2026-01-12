@@ -12,6 +12,7 @@ services:
       - "./api/migrations:/api/migrations"
     environment:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - DEV_MODE=${DEV_MODE}
   postgres:
     image: postgres:alpine
     environment:
@@ -36,6 +37,11 @@ services:
       - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
     volumes:
       - pgadmin_data:/var/lib/pgadmin
+  maildev:
+    image: maildev/maildev:latest
+    ports:
+      - "1025:1025"
+      - "1080:1080"
 volumes:
   postgres_data:
   pgadmin_data:
